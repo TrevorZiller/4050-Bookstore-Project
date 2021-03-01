@@ -48,6 +48,34 @@ footer {
     margin-top: auto;
 }
 
+/* home page stuff */
+
+.section-title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #404040;
+}
+
+.featured-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-item {
+    width: 12rem;
+    height: 5rem;
+    background-color: #404040;
+    margin: 0 2rem;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.book-window {
+    margin: 5em;
+}
+
 /*account page stuff*/
 
 .login {
