@@ -29,15 +29,34 @@
     </ul>
 </nav>
 <main>
-    <div>
-        <form action="ConfirmRegistration.html">
-            <label for="fname">Username:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">Password:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <input type="submit" value="Login">
+    <div class="login">
+        <form action="createAcct.html">
+            <h1>Create Account (*=required)</h1>
+            <br>
+            <label><b>*Username:</b></label><br>
+            <input type="text" placeholder="Enter username..." id="username" required>
+            <br><br>
+            <label><b>*Password:</b></label><br>
+            <input type="password" placeholder="Enter Password..." id="password" required>
+            <br><br>
+            <label><b>* Confirm Password:</b></label><br>
+            <input type="password" placeholder="Enter Password..." id="password" required>
+            <br><br>
+            <label><b>*Email:</b></label><br>
+            <input type="password" placeholder="Enter Password..." id="password" required>
+            <br><br>
+            <label><b>Card Number:</b></label>
+            <input type="cardInfo" placeholder="Enter 16-digit card number..." id="password" required>
+            <br></br>
+            <label><b>Expiration Date:</b></label>
+            <input type="cardInfo" placeholder="..." id="cardInfo" required>
+            <label><b>Security Code:</b></label>
+            <input type="cardInfo" placeholder="..." id="cardInfo" required>
+            <br><br>
         </form>
-        <label>Don't have an account? Create one here!</label>
+        <form action="createAcct.html">
+            <button type="submit" id="create">Create An Account</button>
+        </form>
     </div>
 </main>
 <footer>Copyright &copy; 2021</footer>
