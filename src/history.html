@@ -8,7 +8,8 @@
 
     <style>
         main {
-            padding: 2rem 10rem;
+            padding: .5rem;
+            text-align: center;
         }
     </style>
 
@@ -16,7 +17,7 @@
 
 <body>
 <nav>
-    <h1 class="title">ConfirmationPage</h1>
+    <a href="index.html" style="text-decoration: none; color: white"><h1 class="title">Purchase History</h1></a>
     <ul class="links">
         <li><a href="index.html" style="text-decoration: none; color: white">Home</a></li>
         <li><a href="contact.html" style="text-decoration: none; color: white">Contact</a></li>
@@ -24,22 +25,22 @@
     </ul>
     <ul class="icons">
         <li><a href="search.html"><img src="NavIcons/search-icon.svg" alt="" class="top-icon"></a></li>
-        <li><a href="account.html"><img src="NavIcons/profile-icon.svg" alt="" class="top-icon" id="entry"></a></li>
+        <li><a href="account.html"><img src="NavIcons/profile-icon.svg" class="top-icon" id="entry" alt=""></a></li>
         <li><a href="shop.html"><img src="NavIcons/cart-icon.svg" alt="" class="top-icon"></a></li>
     </ul>
 </nav>
 <main>
-    <div style="text-align: center;"><h1>Congratulations!</h1></div>
-    <div class="login">
-        <form action="shop.html">
-            <label><b>Your order has been successfully submitted.</b></label>
-            <h1>Order Details:</h1>
-            <label><b>Purchase: Gone With the Wind</b></label><br>
-            <label><b>Total: $22.18</b></label><br>
+    <div class="featured-items">
+        <div class="book-window">
+            <h2 class="section-title" id="demo">Recent Purchase</h2>
+            <a href="Sample1.html"><img src="BookPictures/SampleBook1.jpg" class="images" height="500" width="300" alt=""></a>
             <br></br>
-            <button type="submit" id="submit">Buy it Again?</button>
-            <br><br>
-        </form>
+            <form action="shop.html">
+                <button type="submit" id="buyAgain">Buy it again?</button>
+                <br><br>
+            </form>
+        </div>
+
     </div>
 </main>
 <footer>Copyright &copy; 2021</footer>
