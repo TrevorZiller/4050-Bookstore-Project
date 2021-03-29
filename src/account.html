@@ -30,7 +30,7 @@
 </nav>
 <main>
     <div class="login">
-        <form action="edit.html">
+        <form action="edit.html" id="login">
         <h1>Login</h1>
         <br>
         <label><b>Username:</b></label><br>
@@ -39,7 +39,7 @@
         <label><b>Password:</b></label><br>
         <input type="password" placeholder="Enter Password..." id="password" required>
         <br><br>
-        <button type="submit" id="submit">Edit Account</button>
+        <button type="submit" id="submit" onClick ="return login();">Edit Account</button>
         <br><br>
         </form>
         <form action="createAcct.html">
@@ -51,3 +51,14 @@
 <footer>Copyright &copy; 2021</footer>
 </body>
 </html>
+<script>
+    function login() {
+        var form1 = document.getElementById('login');
+        if (form1.username.value != "butts" && form1.password != "butters") {
+            alert("invalid username/ password!");
+            form1.username.focus();
+            return false;
+        }
+        return true;
+    }
+</script>

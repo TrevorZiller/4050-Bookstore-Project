@@ -29,7 +29,7 @@
 </nav>
 <main>
     <div class="login">
-        <form action="createAcct.html">
+        <form action="ConfirmRegistration.html" id="createAcct">
             <h1>Create Account (*=required)</h1>
             <br>
             <label><b>*Username:</b></label><br>
@@ -39,7 +39,7 @@
             <input type="password" placeholder="Enter Password..." id="password" required>
             <br><br>
             <label><b>*Confirm Password:</b></label><br>
-            <input type="password" placeholder="Enter Password..." id="password" required>
+            <input type="password" placeholder="Enter Password..." id="password2" required>
             <br><br>
             <label><b>*Email:</b></label><br>
             <input type="email" placeholder="Enter Email..." id="email" required>
@@ -61,12 +61,21 @@
             <label><b>Security Code:</b></label>
             <input type="cardInfo" placeholder="..." id="cardInfo" required>
             <br><br>
-        </form>
-        <form action="ConfirmRegistration.html">
-            <button type="submit" id="create">Create An Account</button>
+            <button type="submit" id="create" onClick = "return checkPass();">Create An Account</button>
         </form>
     </div>
 </main>
 <footer>Copyright &copy; 2021</footer>
 </body>
 </html>
+<script>
+    function checkPass() {
+        var form1 = document.getElementById('createAcct');
+        if (form1.password2.value != form1.password.value) {
+            alert("Password must macth confirmation!");
+            form1.username.focus();
+            return false;
+        }
+        return true;
+    }
+</script>

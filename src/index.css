@@ -94,7 +94,28 @@ footer {
     box-sizing: border-box;
 }
 
+#username2 {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+#username3 {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
 #password {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+#password2 {
     width: 100%;
     padding: 10px 20px;
     margin: 10px;
