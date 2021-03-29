@@ -129,6 +129,13 @@ footer {
     box-sizing: border-box;
 }
 
+#address {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
 #cardInfo {
     width: 20%;
     padding: 10px 20px;

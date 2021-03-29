@@ -45,21 +45,21 @@
             <input type="email" placeholder="Enter Email..." id="email" required>
             <br><br>
             <label><b>Street Address:</b></label><br>
-            <input type="text" placeholder="Enter Street Address..." id="username" required>
+            <input type="text" placeholder="Enter Street Address..." id="address">
             <br><br>
             <label><b>City:</b></label><br>
-            <input type="text" placeholder="Enter city..." id="password" required>
+            <input type="text" placeholder="Enter city..." id="address">
             <br><br>
             <label><b>State:</b></label><br>
-            <input type="text" placeholder="Enter state..." id="password" required>
+            <input type="text" placeholder="Enter state..." id="address">
             <br><br>
             <label><b>Card Number:</b></label>
-            <input type="cardInfo" placeholder="Enter 16-digit card number..." id="password" required>
+            <input type="cardInfo" placeholder="Enter 16-digit card number..." id="cardInfo">
             <br></br>
             <label><b>Expiration Date:</b></label>
-            <input type="cardInfo" placeholder="..." id="cardInfo" required>
+            <input type="cardInfo" placeholder="..." id="cardInfo">
             <label><b>Security Code:</b></label>
-            <input type="cardInfo" placeholder="..." id="cardInfo" required>
+            <input type="cardInfo" placeholder="..." id="cardInfo">
             <br><br>
             <button type="submit" id="create" onClick = "return checkPass();">Create An Account</button>
         </form>
@@ -70,9 +70,9 @@
 </html>
 <script>
     function checkPass() {
-        var form1 = document.getElementById('createAcct');
-        if (form1.password2.value != form1.password.value) {
-            alert("Password must macth confirmation!");
+        let form1 = document.getElementById('createAcct');
+        if (form1.password2.value !== form1.password.value) {
+            alert("Password must match confirmation!");
             form1.username.focus();
             return false;
         }
