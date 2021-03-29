@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class UserDAO {
     public User checkLogin(String email, String password) throws SQLException, ClassNotFoundException {
-        String jdbcURL = "";
+        String jdbcURL = "jdbc:mysql://localhost:3306/4050-Bookstore-Project";
         String dbUser = "root";
         String dbPassword = "password";
 
