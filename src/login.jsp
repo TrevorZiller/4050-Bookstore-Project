@@ -69,7 +69,7 @@
         $("#loginForm").validate({
             rules: {
                 email: {
-                    required: true,z
+                    required: true,
                     email: true
                 },
 
