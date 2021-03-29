@@ -1,3 +1,5 @@
+package bookstore;
+
 public class User {
     private int userID;
     private String firstName;
