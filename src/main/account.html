@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account | Home</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        main {
+            padding: 2rem 10rem;
+        }
+    </style>
+
+</head>
+
+<body>
+<nav>
+    <h1 class="title">AccountPage</h1>
+    <ul class="links">
+        <li><a href="index.html" style="text-decoration: none; color: white">Home</a></li>
+        <li><a href="contact.html" style="text-decoration: none; color: white">Contact</a></li>
+        <li><a href="history.html" style="text-decoration: none; color: white">History</a></li>
+    </ul>
+    <ul class="icons">
+        <li><a href="search.html"><img src="resources/search-icon.svg" alt="" class="top-icon"></a></li>
+        <li><a href="Account.html"><img src="resources/profile-icon.svg" alt="" class="top-icon" id="entry"></a></li>
+        <li><a href="Shop.html"><img src="resources/cart-icon.svg" alt="" class="top-icon"></a></li>
+    </ul>
+</nav>
+<main>
+    <div class="login">
+        <form action="edit.html" id="login">
+        <h1>Login</h1>
+        <br>
+        <label><b>Username:</b></label><br>
+        <input type="text" placeholder="Enter username..." id="username" required>
+        <br><br>
+        <label><b>Password:</b></label><br>
+        <input type="password" placeholder="Enter Password..." id="password" required>
+        <br><br>
+        <button type="submit" id="submit" onClick ="return login();">Edit Account</button>
+        <br><br>
+        </form>
+        <form action="createAcct.html">
+        <button type="submit" id="create">Create An Account</button>
+        </form>
+        <a href="forgot.html">I Forgot My Password</a>
+    </div>
+</main>
+<footer>Copyright &copy; 2021</footer>
+</body>
+</html>
+<script>
+    function login() {
+        var form1 = document.getElementById('login');
+        if (form1.username.value != "butts" && form1.password != "butters") {
+            alert("invalid username/ password!");
+            form1.username.focus();
+            return false;
+        }
+        return true;
+    }
+</script>

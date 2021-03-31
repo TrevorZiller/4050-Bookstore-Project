@@ -3,9 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <display-name>4050-Bookstore-Project</display-name>
+    <display-name>Bookstore</display-name>
+
     <servlet>
-        <servlet-name>login</servlet-name>
-        <servlet-class>4050-Bookstore-Project</servlet-class>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>bookstore.UserLoginServlet</servlet-class>
     </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
 </web-app>

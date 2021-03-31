@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Account | Home</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../src/index.css">
 
     <style>
         main {
@@ -30,19 +30,19 @@
     <nav>
         <h1 class="title">AccountPage</h1>
         <ul class="links">
-            <li><a href="index.html" style="text-decoration: none; color: white">Home</a></li>
-            <li><a href="contact.html" style="text-decoration: none; color: white">Contact</a></li>
-            <li><a href="history.html" style="text-decoration: none; color: white">History</a></li>
+            <li><a href="../../src/index.html" style="text-decoration: none; color: white">Home</a></li>
+            <li><a href="../../src/contact.html" style="text-decoration: none; color: white">Contact</a></li>
+            <li><a href="../../src/history.html" style="text-decoration: none; color: white">History</a></li>
         </ul>
         <ul class="icons">
-            <li><a href="search.html"><img src="NavIcons/search-icon.svg" alt="" class="top-icon"></a></li>
-            <li><a href="Account.html"><img src="NavIcons/profile-icon.svg" alt="" class="top-icon" id="entry"></a></li>
-            <li><a href="Shop.html"><img src="NavIcons/cart-icon.svg" alt="" class="top-icon"></a></li>
+            <li><a href="../../src/search.html"><img src="../../src/NavIcons/search-icon.svg" alt="" class="top-icon"></a></li>
+            <li><a href="Account.html"><img src="../../src/NavIcons/profile-icon.svg" alt="" class="top-icon" id="entry"></a></li>
+            <li><a href="Shop.html"><img src="../../src/NavIcons/cart-icon.svg" alt="" class="top-icon"></a></li>
         </ul>
     </nav>
     <main>
         <div class="login">
-            <form action="edit.html">
+            <form action="../../src/edit.html">
                 <h1>Login</h1>
                 <br>
                 <label><b>Username:</b></label><br>
@@ -55,10 +55,10 @@
                 <button type="submit" id="submit">Edit Account</button>
                 <br><br>
             </form>
-            <form action="createAcct.html">
+            <form action="../../src/createAcct.html">
                 <button type="submit" id="create">Create An Account</button>
             </form>
-            <a href="forgot.html">I Forgot My Password</a>
+            <a href="../../src/forgot.html">I Forgot My Password</a>
         </div>
     </main>
     <footer>Copyright &copy; 2021</footer>
