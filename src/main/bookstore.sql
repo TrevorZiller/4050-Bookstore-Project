@@ -82,8 +82,8 @@ CREATE TABLE `book` (
 INSERT INTO `book` (`isbn`, `category`, `authorName`, `title`, `coverPic`, `edition`, `publisher`, `publicationYear`, `quantityInStock`, `minimumThresh`, `buyPrice`, `sellPrice`, `orderID`) VALUES
 (297829190, 'Nonfiction', 'Lansing, Alfred', 'Endurance: Shackletons Incredible Voyage to the Antarctic', NULL, 1, 'Weidenfeld and Nicolson', '1959-01-07', 7, 1, 6.99, 10.99, NULL),
 (978006055, 'Nonfiction', 'Graham, Benjamin', 'Intelligent Investor, The', NULL, 4, 'HarperCollins', '1973-03-21', 15, 2, 7.99, 22.99, NULL),
-(978037572, 'Nonfiction', 'Larson, Erik', 'Devil in the White City, The', NULL, 1, 'Vintage', '2002-10-16', 20, 5, 7.99, 16, NULL),
-(978043906, 'Fiction', 'Rowling, J.K.', 'Harry Potter and the Chamber of Secrets', NULL, 1, 'Bloomsbury', '1998-07-02', 50, 10, 6.99, 20.99, NULL),
+(978037572, 'Nonfiction', 'Larson, Erik', 'Devil in the White City, The', 'TheDevilInTheWhiteCity', 1, 'Vintage', '2002-10-16', 20, 5, 7.99, 16, NULL),
+(978043906, 'Fiction', 'Rowling, J.K.', 'Harry Potter and the Chamber of Secrets', 'HarryPotterAndTheChamberOfSecrets', 1, 'Bloomsbury', '1998-07-02', 50, 10, 6.99, 20.99, NULL),
 (978043913, 'Fiction', 'Rowling, J.K.', 'Harry Potter and the Prisoner of Azkaban', NULL, 1, 'Bloomsbury', '1999-07-08', 50, 10, 6.99, 20.99, NULL),
 (978043935, 'Fiction', 'Rowling, J.K.', 'Harry Potter and the Order of the Phoenix', NULL, 1, 'Bloomsbury', '2003-06-21', 50, 10, 7.99, 24.99, NULL),
 (978045153, 'Fiction', 'Solzhenitsyn, Alexander', 'One Day in the Life of Ivan Denisovich', NULL, 2, 'Signet', '2012-03-05', 50, 10, 2, 5.95, NULL),
