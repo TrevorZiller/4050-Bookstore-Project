@@ -6,12 +6,12 @@
     <display-name>Bookstore</display-name>
 
     <servlet>
-        <servlet-name>Test</servlet-name>
-        <servlet-class>bookstore.UserLoginServlet</servlet-class>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <servlet-class>bookstore</servlet-class>
     </servlet>
     
     <servlet-mapping>
-        <servlet-name>Test</servlet-name>
+        <servlet-name>UserLoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 </web-app>

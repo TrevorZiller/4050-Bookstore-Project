@@ -1,3 +1,17 @@
+<?php
+
+require('database.php');
+
+$query = 'SELECT * FROM book WHERE `isbn` = 978037572 OR `isbn` = 978043906';
+
+$statement = $db->prepare($query);
+$statement->execute();
+$books = $statement->fetchAll();
+$statement->closeCursor();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,16 +46,12 @@
     </nav>
     <main>
         <div class="featured-items">
-            <div class="book-window">
-                <h2 class="section-title" id="demo">FEATURED</h2>
-                <a href="Sample1.html"><img src="resources/SampleBook1.jpg" class="images" height="500" width="300" alt=""></a>
-            </div>
-
-            <div class="book-window">
-                <h2 class="section-title" id="demo2">TOP SELLERS</h2>
-                <a href="Sample2.html"><img src="resources/SampleBook2.jpg" class="images" height="500" width="300" alt=""></a>
-            </div>
-
+            <?php foreach ($books as $book) : ?>
+                <div class="book-window">
+                    <h2 class="section-title" id="demo">FEATURED</h2>
+                    <a href="Sample1.html"><img src="resources/<?php echo $book['coverPic'] ?>.jpg" class="images" height="500" width="300" alt=""></a>
+                </div>
+            <?php endforeach; ?>
         </div>
     </main>
     <footer>Copyright &copy; 2021</footer>

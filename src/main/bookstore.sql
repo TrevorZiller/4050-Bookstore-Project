@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2021 at 12:11 AM
+-- Generation Time: Apr 02, 2021 at 01:24 AM
 -- Server version: 8.0.23
 -- PHP Version: 8.0.3
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 -- Database: `bookstore`
 --
 
+CREATE DATABASE `bookstore`;
+
 -- --------------------------------------------------------
 
 --
@@ -28,11 +30,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `address` (
-  `addressID` int NOT NULL,
-  `street` varchar(45) DEFAULT NULL,
-  `state` varchar(45) DEFAULT NULL,
-  `zip` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                           `addressID` int NOT NULL,
+                           `street` varchar(45) DEFAULT NULL,
+                           `state` varchar(45) DEFAULT NULL,
+                           `zip` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -41,8 +43,15 @@ CREATE TABLE `address` (
 --
 
 CREATE TABLE `admin` (
-  `adminID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    `adminID` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`adminID`) VALUES
+(1);
 
 -- --------------------------------------------------------
 
@@ -51,20 +60,20 @@ CREATE TABLE `admin` (
 --
 
 CREATE TABLE `book` (
-  `isbn` bigint NOT NULL,
-  `category` varchar(45) DEFAULT NULL,
-  `authorName` varchar(45) DEFAULT NULL,
-  `title` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `coverPic` varchar(45) DEFAULT NULL,
-  `edition` int DEFAULT NULL,
-  `publisher` varchar(45) DEFAULT NULL,
-  `publicationYear` date DEFAULT NULL,
-  `quantityInStock` int DEFAULT NULL,
-  `minimumThresh` int DEFAULT NULL,
-  `buyPrice` float DEFAULT NULL,
-  `sellPrice` float DEFAULT NULL,
-  `orderID` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                        `isbn` bigint NOT NULL,
+                        `category` varchar(45) DEFAULT NULL,
+                        `authorName` varchar(45) DEFAULT NULL,
+                        `title` varchar(64) CHARACTER SET utf8mb4 DEFAULT NULL,
+                        `coverPic` varchar(45) DEFAULT NULL,
+                        `edition` int DEFAULT NULL,
+                        `publisher` varchar(45) DEFAULT NULL,
+                        `publicationYear` date DEFAULT NULL,
+                        `quantityInStock` int DEFAULT NULL,
+                        `minimumThresh` int DEFAULT NULL,
+                        `buyPrice` float DEFAULT NULL,
+                        `sellPrice` float DEFAULT NULL,
+                        `orderID` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `book`
@@ -94,10 +103,10 @@ INSERT INTO `book` (`isbn`, `category`, `authorName`, `title`, `coverPic`, `edit
 --
 
 CREATE TABLE `customer` (
-  `customerID` int NOT NULL,
-  `cartContents` varchar(256) DEFAULT NULL,
-  `addressID` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                            `customerID` int NOT NULL,
+                            `cartContents` varchar(256) DEFAULT NULL,
+                            `addressID` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -106,18 +115,18 @@ CREATE TABLE `customer` (
 --
 
 CREATE TABLE `order` (
-  `orderID` int NOT NULL,
-  `custID` int DEFAULT NULL,
-  `payNumber` int DEFAULT NULL,
-  `paymentNumber` int DEFAULT NULL,
-  `orderDate` date DEFAULT NULL,
-  `orderTime` time DEFAULT NULL,
-  `orderStatus` varchar(45) DEFAULT NULL,
-  `totalPrice` float DEFAULT NULL,
-  `orderedBook` varchar(45) DEFAULT NULL,
-  `promoCode` int DEFAULT NULL,
-  `orderAddress` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                         `orderID` int NOT NULL,
+                         `custID` int DEFAULT NULL,
+                         `payNumber` int DEFAULT NULL,
+                         `paymentNumber` int DEFAULT NULL,
+                         `orderDate` date DEFAULT NULL,
+                         `orderTime` time DEFAULT NULL,
+                         `orderStatus` varchar(45) DEFAULT NULL,
+                         `totalPrice` float DEFAULT NULL,
+                         `orderedBook` varchar(45) DEFAULT NULL,
+                         `promoCode` int DEFAULT NULL,
+                         `orderAddress` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -126,11 +135,11 @@ CREATE TABLE `order` (
 --
 
 CREATE TABLE `paymentmethod` (
-  `cardNum` int NOT NULL,
-  `ownerID` int DEFAULT NULL,
-  `cardType` varchar(45) DEFAULT NULL,
-  `expirationDate` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                                 `cardNum` int NOT NULL,
+                                 `ownerID` int DEFAULT NULL,
+                                 `cardType` varchar(45) DEFAULT NULL,
+                                 `expirationDate` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -139,11 +148,11 @@ CREATE TABLE `paymentmethod` (
 --
 
 CREATE TABLE `promotion` (
-  `promoCode` int NOT NULL,
-  `startDate` date DEFAULT NULL,
-  `percentage` float DEFAULT NULL,
-  `expireDate` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                             `promoCode` int NOT NULL,
+                             `startDate` date DEFAULT NULL,
+                             `percentage` float DEFAULT NULL,
+                             `expireDate` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -152,11 +161,24 @@ CREATE TABLE `promotion` (
 --
 
 CREATE TABLE `users` (
-  `userID` int NOT NULL,
-  `firstName` varchar(45) DEFAULT NULL,
-  `lastName` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                         `userID` int NOT NULL,
+                         `firstName` varchar(45) DEFAULT NULL,
+                         `lastName` varchar(45) DEFAULT NULL,
+                         `password` varchar(45) DEFAULT NULL,
+                         `email` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userID`, `firstName`, `lastName`, `password`, `email`) VALUES
+(1, 'James', 'Connner', 'thisismypassword', 'jcon94@uga.edu'),
+(2, 'Jon', 'Snow', 'blankstare', 'kingindanorf@idunwannit.com'),
+(3, 'third', 'user', 'ilike3', 'big3@three.org'),
+(4, 'Alastor', 'Moody', 'imactuallybartycrouch', 'bigeye@hogwarts.edu'),
+(5, 'test', 'user', 'password', 'outofideas@dumb'),
+(6, 'autoID', 'test', 'pass', 'please@work');
 
 --
 -- Indexes for dumped tables
@@ -166,56 +188,56 @@ CREATE TABLE `users` (
 -- Indexes for table `address`
 --
 ALTER TABLE `address`
-  ADD PRIMARY KEY (`addressID`);
+    ADD PRIMARY KEY (`addressID`);
 
 --
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`adminID`);
+    ADD PRIMARY KEY (`adminID`);
 
 --
 -- Indexes for table `book`
 --
 ALTER TABLE `book`
-  ADD PRIMARY KEY (`isbn`),
-  ADD KEY `orderID_idx` (`orderID`);
+    ADD PRIMARY KEY (`isbn`),
+    ADD KEY `orderID_idx` (`orderID`);
 
 --
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`customerID`),
-  ADD KEY `addressID_idx` (`addressID`);
+    ADD PRIMARY KEY (`customerID`),
+    ADD KEY `addressID_idx` (`addressID`);
 
 --
 -- Indexes for table `order`
 --
 ALTER TABLE `order`
-  ADD PRIMARY KEY (`orderID`),
-  ADD KEY `custID_idx` (`custID`),
-  ADD KEY `promoCode_idx` (`promoCode`),
-  ADD KEY `payNumber_idx` (`payNumber`),
-  ADD KEY `orderAddr_idx` (`orderAddress`);
+    ADD PRIMARY KEY (`orderID`),
+    ADD KEY `custID_idx` (`custID`),
+    ADD KEY `promoCode_idx` (`promoCode`),
+    ADD KEY `payNumber_idx` (`payNumber`),
+    ADD KEY `orderAddr_idx` (`orderAddress`);
 
 --
 -- Indexes for table `paymentmethod`
 --
 ALTER TABLE `paymentmethod`
-  ADD PRIMARY KEY (`cardNum`),
-  ADD KEY `custID_idx` (`ownerID`);
+    ADD PRIMARY KEY (`cardNum`),
+    ADD KEY `custID_idx` (`ownerID`);
 
 --
 -- Indexes for table `promotion`
 --
 ALTER TABLE `promotion`
-  ADD PRIMARY KEY (`promoCode`);
+    ADD PRIMARY KEY (`promoCode`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`userID`);
+    ADD PRIMARY KEY (`userID`);
 
 --
 -- Constraints for dumped tables
@@ -225,35 +247,35 @@ ALTER TABLE `users`
 -- Constraints for table `admin`
 --
 ALTER TABLE `admin`
-  ADD CONSTRAINT `adminId` FOREIGN KEY (`adminID`) REFERENCES `users` (`userID`);
+    ADD CONSTRAINT `adminId` FOREIGN KEY (`adminID`) REFERENCES `users` (`userID`);
 
 --
 -- Constraints for table `book`
 --
 ALTER TABLE `book`
-  ADD CONSTRAINT `orderID` FOREIGN KEY (`orderID`) REFERENCES `order` (`orderID`);
+    ADD CONSTRAINT `orderID` FOREIGN KEY (`orderID`) REFERENCES `order` (`orderID`);
 
 --
 -- Constraints for table `customer`
 --
 ALTER TABLE `customer`
-  ADD CONSTRAINT `addressID` FOREIGN KEY (`addressID`) REFERENCES `address` (`addressID`),
-  ADD CONSTRAINT `customerID` FOREIGN KEY (`customerID`) REFERENCES `users` (`userID`);
+    ADD CONSTRAINT `addressID` FOREIGN KEY (`addressID`) REFERENCES `address` (`addressID`),
+    ADD CONSTRAINT `customerID` FOREIGN KEY (`customerID`) REFERENCES `users` (`userID`);
 
 --
 -- Constraints for table `order`
 --
 ALTER TABLE `order`
-  ADD CONSTRAINT `custID` FOREIGN KEY (`custID`) REFERENCES `customer` (`customerID`),
-  ADD CONSTRAINT `orderAddr` FOREIGN KEY (`orderAddress`) REFERENCES `customer` (`addressID`),
-  ADD CONSTRAINT `payNumber` FOREIGN KEY (`payNumber`) REFERENCES `paymentmethod` (`cardNum`),
-  ADD CONSTRAINT `promoCode` FOREIGN KEY (`promoCode`) REFERENCES `promotion` (`promoCode`);
+    ADD CONSTRAINT `custID` FOREIGN KEY (`custID`) REFERENCES `customer` (`customerID`),
+    ADD CONSTRAINT `orderAddr` FOREIGN KEY (`orderAddress`) REFERENCES `customer` (`addressID`),
+    ADD CONSTRAINT `payNumber` FOREIGN KEY (`payNumber`) REFERENCES `paymentmethod` (`cardNum`),
+    ADD CONSTRAINT `promoCode` FOREIGN KEY (`promoCode`) REFERENCES `promotion` (`promoCode`);
 
 --
 -- Constraints for table `paymentmethod`
 --
 ALTER TABLE `paymentmethod`
-  ADD CONSTRAINT `ownerID` FOREIGN KEY (`ownerID`) REFERENCES `customer` (`customerID`);
+    ADD CONSTRAINT `ownerID` FOREIGN KEY (`ownerID`) REFERENCES `customer` (`customerID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

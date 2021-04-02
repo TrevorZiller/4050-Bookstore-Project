@@ -1,4 +1,4 @@
-package bookstore;
+package java.bookstore;
 
 import java.sql.*;
 
