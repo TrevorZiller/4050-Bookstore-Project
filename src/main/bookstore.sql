@@ -165,20 +165,29 @@ CREATE TABLE `users` (
                          `firstName` varchar(45) DEFAULT NULL,
                          `lastName` varchar(45) DEFAULT NULL,
                          `password` varchar(45) DEFAULT NULL,
-                         `email` varchar(45) NOT NULL
+                         `email` varchar(45) NOT NULL,
+                         `street` varchar(64) DEFAULT NULL,
+                         `city` varchar(64) DEFAULT NULL,
+                         `state` varchar(64) DEFAULT NULL,
+                         `cardNum` varchar(64) DEFAULT NULL,
+                         `cvv` varchar(64) DEFAULT NULL,
+                         `expMonth` varchar(2) NOT NULL,
+                         `expYear` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`userID`, `firstName`, `lastName`, `password`, `email`) VALUES
-(1, 'James', 'Connner', 'thisismypassword', 'jcon94@uga.edu'),
-(2, 'Jon', 'Snow', 'blankstare', 'kingindanorf@idunwannit.com'),
-(3, 'third', 'user', 'ilike3', 'big3@three.org'),
-(4, 'Alastor', 'Moody', 'imactuallybartycrouch', 'bigeye@hogwarts.edu'),
-(5, 'test', 'user', 'password', 'outofideas@dumb'),
-(6, 'autoID', 'test', 'pass', 'please@work');
+INSERT INTO `users` (`userID`, `firstName`, `lastName`, `password`, `email`, `street`, `city`, `state`, `cardNum`, `cvv`, `expMonth`, `expYear`) VALUES
+(1, 'James', 'Conner', '987', 'jcon94@uga.edu', '100', 'Athens', 'WY', '1325322273686237', '', '12', '30'),
+(2, 'Jon', 'Snow', 'blankstare', 'kingindanorf@idunwannit.com', NULL, NULL, NULL, NULL, NULL, '', ''),
+(3, 'third', 'user', 'ilike3', 'big3@three.org', NULL, NULL, NULL, NULL, NULL, '', ''),
+(4, 'Alastor', 'Moody', 'imactuallybartycrouch', 'bigeye@hogwarts.edu', NULL, NULL, NULL, NULL, NULL, '', ''),
+(5, 'test', 'user', 'password', 'outofideas@dumb', NULL, NULL, NULL, NULL, NULL, '', ''),
+(6, 'autoID', 'test', 'pass', 'please@work', NULL, NULL, NULL, NULL, NULL, '', ''),
+(7, 'newattributes', 'test', 'passw', 'test@test.org', '123 ad dr', 'cityville', 'AL', '1234123412341234', '666', '', ''),
+(8, 'test', 'person', 'Pass', 'emai', 'street', 'city', 'AR', '5454554545545454545', '564', '03', '23');
 
 --
 -- Indexes for dumped tables
